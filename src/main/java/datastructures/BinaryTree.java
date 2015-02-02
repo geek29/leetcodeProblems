@@ -38,7 +38,7 @@ public class BinaryTree {
 	}
 	
 	public void add(Comparable data){
-		System.out.println("KeepParent " + keepParent);
+		
 		TreeNode node = new TreeNode(data);		
 		if(root==null){
 			root = node;
@@ -55,8 +55,7 @@ public class BinaryTree {
 					else {						
 						currentNode.right = node;
 						if(keepParent){
-							node.parent = currentNode;
-							System.out.println("Adding parent link also");
+							node.parent = currentNode;							
 						}
 						break;
 					}
@@ -67,8 +66,7 @@ public class BinaryTree {
 					else {												
 						currentNode.left = node;
 						if(keepParent){
-							node.parent = currentNode;
-							System.out.println("Adding parent link also");
+							node.parent = currentNode;							
 						}
 						break;
 					}
@@ -89,13 +87,13 @@ public class BinaryTree {
 		int maxWidth = 0;
 		int maxHeight = 0;
 		for(int[] a : list){
-			System.out.println("counter="+a[0] + " level="+ a[1] + " d="+ a[2] );
+			//System.out.println("counter="+a[0] + " level="+ a[1] + " d="+ a[2] );
 			if(a[0]> maxWidth)
 				maxWidth = a[0];
 			if(a[1]> maxHeight)
 				maxHeight = a[1];
 		}
-		System.out.println("MaxHeight="+ maxHeight + " maxWidth="+ maxWidth);
+		//System.out.println("MaxHeight="+ maxHeight + " maxWidth="+ maxWidth);
 		for(int i=0;i<=maxHeight;i++){
 			StringBuilder sb = new StringBuilder();
 			for(int j=0;j<=maxWidth;j++){
@@ -403,7 +401,7 @@ public class BinaryTree {
 		tree.add("l");
 		tree.add("z");
 		System.out.println("Tree Height = " + tree.treeHeight());
-		/*
+		
 		System.out.println("InOrder Traversal : ");
 		tree.inOrderTraversal(new IteratorFunction(){
 			@Override
@@ -426,7 +424,7 @@ public class BinaryTree {
 			public void handle(Object iterObject) {
 				System.out.println(iterObject);				
 			}			
-		});*/
+		});
 	}
 	
 	public static void testSearch(){
@@ -574,12 +572,12 @@ public class BinaryTree {
 	}
 		
 	public static void main(String[] args) {
-		/*testTraversals();
+		testTraversals();
 		testSearch();
 		testTreeHeight();
 		testCreateMinimalBST();
-		testDelete();*/
-		//testCreateListOfNodeForDepthD();
+		testDelete();
+		testCreateListOfNodeForDepthD();
 		testInOrderSuccessor();
 				
 	}
