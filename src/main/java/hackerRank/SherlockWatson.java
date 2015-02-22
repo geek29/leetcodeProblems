@@ -2,6 +2,11 @@ package hackerRank;
 
 import java.util.Scanner;
 
+/**
+ * Solution to https://www.hackerrank.com/challenges/sherlock-and-watson
+ * @author tushark
+ *
+ */
 public class SherlockWatson {
 	
 	public static void main(String[] args) {

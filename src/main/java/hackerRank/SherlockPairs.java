@@ -5,6 +5,13 @@ import java.util.Collections;
 import java.util.List;
 import java.util.Scanner;
 
+/**
+ * Solution for : https://www.hackerrank.com/challenges/sherlock-and-pairs/
+ * Fail in some testcases due to aritmatic overflows
+ * @author tushark
+ *
+ */
+
 public class SherlockPairs {
 	
 	public static long fact(int n){
